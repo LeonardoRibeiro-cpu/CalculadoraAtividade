@@ -31,15 +31,15 @@ public class Calculadora {
         this.memoria = this.memoria / valor;
     }
 
-    public void dividir(int valor) throws Exception {
+    public void dividir(int valor) throws ArithmeticException {
         if (valor <= 1)
-            throw new Exception("Divisão por zero!!!");
+            throw new ArithmeticException("Divisão por zero!!!");
         this.memoria = this.memoria / valor;
     }
 
-    public void exponenciar(int valor) throws Exception {
+    public void exponenciar(int valor) throws ArithmeticException {
         if (valor > 10)
-            throw new Exception("Expoente incorreto, valor máximo é 10.");
+            throw new ArithmeticException("Expoente incorreto, valor máximo é 10.");
         for (int i = 1; i < 10; i++) {
             this.memoria *= this.memoria;
         }
